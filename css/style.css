@@ -1,5 +1,7 @@
 * {
     margin: 0;
+    
+    
 }
 
 @font-face {
@@ -14,6 +16,7 @@
     font-family: font-black;
     src: url(/font/Avenir-Black.ttf);
 }
+
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -23,6 +26,7 @@ body {
     color: #212529;
     text-align: left;
     background-color: #000000;
+    overflow-x: hidden;
 }
 .navbars {
     position: fixed;
@@ -35,6 +39,7 @@ body {
     font-family: font-black;
  
 }
+
 .nav p{
     color: white;
     height: 100%;
@@ -44,6 +49,28 @@ body {
     align-items: center;
     
 }
+
+.nav:after {
+	content:'';
+    top:0;
+	transform:translateX(100%);
+	width:100%;
+	height:30px;
+	position: absolute;
+	z-index:1;
+	animation: slide 3s infinite;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+    animation-timing-function: ease-in-out;
+}
+
+
+
+@keyframes slide {
+	0% {transform:translateX(-100%);}
+	100% {transform:translateX(100%);}
+}
+
+
 .navbar {
     height: 40px;
     background: rgba(0, 0, 0, 0.2);
@@ -53,7 +80,7 @@ body {
 .logo  img{
     width: 140px;
     height: 35px;
-    margin-left: 13px;
+    margin-left: 15px;
     margin-top: 3px;
     cursor: pointer;
 
@@ -85,6 +112,7 @@ body {
     animation: glowing 1500ms infinite;
     color: black;
     cursor: pointer;
+    margin-top: 7px;
 
 }
 .menu {
@@ -106,7 +134,17 @@ height: 100vh;
 display: flex;
 box-shadow:  #d0ccccf8
 }
-/* Dropdown Button */
+.full-hero:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height:70px;  
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0px, rgba(0, 0, 0, 0.0) 76px, rgba(0, 0, 0, 0.1) 32px, rgba(0, 0, 0, 0) 48px);
+
+
+}
 .dropbtn {
     background-color: transparent;
     color: white;
@@ -129,6 +167,7 @@ box-shadow:  #d0ccccf8
     z-index: 1;
     margin-left: 10px;
     border-radius: 8px;
+    border: none;
   }
   
   /* Links inside the dropdown */
@@ -160,15 +199,14 @@ background-repeat: no-repeat;
 
 .hero-section-heading {
 flex-grow: 1;
-width: 400px;
-margin-top: 20px;
+width: 450px;
+margin-top: 7px;
 background-color: black;
 margin-inline: auto;
 
 }
 
 .hero-section-heading h1 {
-    margin-top: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -177,14 +215,14 @@ margin-inline: auto;
     font-family: font-black;
     font-size: 3.9rem;
     line-height: 1.2;
-    margin-left: -150px;
+    margin-left: -230px;
     margin-right: 200px;
 }
 
 .hero-section-heading p {
 font-size: 18px;
 line-height: 1.5;
-margin-left: -250px;
+margin-left: -290px;
 margin-right: 200px;
 width: 850px;
 text-align:  center;
@@ -200,6 +238,7 @@ text-align:  center;
     font-family: font-black;
     font-size: 3.9rem;
     line-height: 1.2;
+   
 }
 
 .hero-section-heading p {
@@ -231,13 +270,14 @@ text-align:  center;
 
 .radio-button {
     width: 380px;
-    border:0.1px solid #a8a8a8;
+    border:1px solid rgb(255 255 255 / 9%);
     border-radius: 40px;
     padding: 13px 13px 13px 13px;
     margin-inline: 6px;
     box-shadow: 0px 3px 6px #0000001a;
     background: rgba(255, 255, 255, 0.15);
     height: 100%;
+    backdrop-filter: blur(9.9px);
 
     
 }
@@ -279,7 +319,6 @@ label {
 .paragraph {
     color: white;
     margin-top: 10px;
-
 }
 
 .second-section { 
@@ -288,6 +327,7 @@ label {
     line-height: 1.5;
     font-family: font-medium;
     display: block;
+    margin-top: 15px;
 
 }
 .red {
@@ -297,28 +337,37 @@ label {
     padding: 8px;
     display: flex;
     margin-top: 50px;
+    position: relative;
 
 }
-
+.success-stories:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height:275px;  
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 38%, rgba(0, 0, 0, 0) 102%);
+}
 .stories {
-    padding: 11px;
-  
+    padding: 11px 11px 0px 11px;
+    z-index: -10;
 
 }
 
 
 .down {
-    height: 500px;
+    height:430px;
     width: 280px;
-    object-fit:fill;
+    object-fit:cover;
     border-radius: 14px;
     margin-top: 100px;
 }
 
 .up{
-    height: 500px;
+    height:430px;
     width: 280px;
-    object-fit:fill;
+    object-fit:cover;
     border-radius: 14px;
 }
 
@@ -338,14 +387,34 @@ label {
     color: white;
     margin-top: 2px;
 }
+.down-alumni {
+    height:300px;
+    width: 280px;
+    object-fit:cover;
+    border-radius: 14px;
+    margin-top: 30px;
+}
+
+.up-alumni {
+    height:300px;
+    width: 280px;
+    object-fit:cover;
+    border-radius: 14px;
+}
 .content {
     text-overflow: ellipsis;
     overflow: hidden;
-    font-family: font-medium;
     color: white;
     font-size: 1.38rem;
+    margin-top: 10px;
 }
-
+.content p {
+    font-family: font-medium;
+    font-size: 17px;
+}
+.name {
+    font-family: font-black !important;
+}
 .mt-4 {
     margin-top: 60px;
 }
@@ -354,8 +423,8 @@ label {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 80px;
-    margin-top: 30px;
+    margin-bottom: 90px;
+    z-index: 99;
 }
 
 .show-more button {
@@ -369,6 +438,11 @@ label {
     font-size: 20px;
 }
 
+.show-more button:hover {
+    background-color: #E50914;
+    cursor: pointer;
+    color: white;
+}
 .planning {
     font-size: 2rem;
     background-color: white;
@@ -580,7 +654,7 @@ b {
 .contact h1 {
     font-size: 44px;
     text-align: center;
-    padding-top: 70px;
+    /* padding-top: 70px; */
     
 }
 .form-contact {
@@ -622,4 +696,165 @@ b {
 .expert {
     width: 380px;
     float: right;
+}
+
+.contact-form-button a {
+    font-size: 20px;
+    color: #E50914
+}
+.youtube {
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+}
+.youtube h1 {
+    font-size: 45px;
+    color: white;
+}
+.youtube-content {
+    display: flex;
+    margin-top: 60px;
+    
+}
+
+.video-all {
+    padding-inline: 20px;
+
+    
+}
+.youtube-vidoes {
+    margin-inline: 15px;
+}
+.youtube-text {
+    font-size: 1.5rem;
+    color: white;
+    font-family: font-medium;
+}
+.our-events {
+    font-size: 2rem;
+    margin-top: 80px;
+}
+
+.our-events h1 {
+    text-align: center;
+    color: white;
+    
+}
+.founder-connect {
+    text-align: center;
+    margin-top: 60px;
+    color: white;
+    font-size: 1.34rem;
+}
+.photo img {
+    height: 181px;
+    width: 181px;
+    border-radius: 50%;
+    margin-top: 90px;
+}
+.founder h4 {
+    color: white;
+    font-family: font-black;
+    font-size: 16px;
+}
+.founder p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+}
+.photo-content {
+    margin-left: 50px;
+    margin-top: 90px;
+}
+.contact-head  {
+    margin-top: 90px;
+    font-size: 1.75rem;
+    font-family: font-black;
+}
+.footer {
+    width: 1140px;
+    margin: auto;
+    color: white;
+}
+.footer p {
+    margin-top: 1.3rem;
+    font-family: font-default;
+}
+.loca {
+    display: flex;
+}
+.place-1 {
+    margin-top: 50px;
+    padding-right: 20px;
+    width: 380px;
+}
+.place-1 p {
+    line-height: 3px;
+
+}
+.locations {
+    display: flex;
+    
+}
+.admission {
+    display: flex;
+    margin-top: 60px;
+}
+.admission div {
+    width: 380px;
+    border: 2px solid white;
+    padding:15px 1px 20px 35px ;
+
+
+}
+.admin-1 {
+    margin-right: 30px;
+}
+.admin-1 a {
+    text-decoration: none;
+    color: white;
+}
+
+.admission-2 {
+    width: 510px;
+    border: 2px solid white;
+    padding:15px 1px 20px 35px ;
+    margin-top: 25px;
+
+}
+.end-footer div p a {
+    text-decoration: none;
+    color: #E50914;
+}
+.end-footer div p a:hover {
+    text-decoration: underline;
+    color: #3367D1;
+}
+.whatsapp {
+    position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+    left: 19px;
+	background-color:#E50914;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+    font-size:30px;
+    z-index:100;
+    cursor: pointer;
+    box-shadow: 2px 2px 3px #292929;
+    
+}
+
+.whatsapp div {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.large-line {
+    border: 1px solid rgb(255 255 255 / 9%); 
+    width: 100% ;
+   
 }
