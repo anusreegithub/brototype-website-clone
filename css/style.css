@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    padding: 0;
     
     
 }
@@ -17,20 +18,27 @@
     src: url(/font/Avenir-Black.ttf);
 }
 
+html {
+    scrollbar-width: none; 
+   
+  }
+
 body {
     margin: 0;
+    background-color: #000000;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
     text-align: left;
-    background-color: #000000;
     overflow-x: hidden;
+    width: 100%;
 }
 .navbars {
     position: fixed;
     width: 100%;
+    z-index: 1000;
 }
 .nav {
     width: 100%;
@@ -132,6 +140,7 @@ body {
 width: 100%;
 height: 100vh;
 display: flex;
+background-color: #000000;
 box-shadow:  #d0ccccf8
 }
 .full-hero:after {
@@ -170,7 +179,6 @@ box-shadow:  #d0ccccf8
     border: none;
   }
   
-  /* Links inside the dropdown */
   .dropdown-content a {
     color: black;
     text-decoration: none;
@@ -259,6 +267,7 @@ text-align:  center;
     display:flex;
     justify-content: center;
     align-items: center;
+    
 
 }
 .submit {
@@ -278,6 +287,7 @@ text-align:  center;
     background: rgba(255, 255, 255, 0.15);
     height: 100%;
     backdrop-filter: blur(9.9px);
+  
 
     
 }
@@ -318,7 +328,7 @@ label {
 
 .paragraph {
     color: white;
-    margin-top: 10px;
+    
 }
 
 .second-section { 
@@ -327,18 +337,19 @@ label {
     line-height: 1.5;
     font-family: font-medium;
     display: block;
-    margin-top: 15px;
+    margin-top: 25px;
+  
 
 }
 .red {
     color: #E50914;
 }
-.success-stories {
-    padding: 8px;
+.success-stories, .success-events {
     display: flex;
     margin-top: 50px;
     position: relative;
-
+    padding: 18px;
+    
 }
 .success-stories:after {
     content: '';
@@ -346,7 +357,16 @@ label {
     bottom: 0;
     left: 0;
     right: 0;
-    height:275px;  
+    height:275px;   
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 38%, rgba(0, 0, 0, 0) 102%);
+}
+.success-events:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height:420px;   
     background: linear-gradient(0deg, rgba(0, 0, 0, 1) 38%, rgba(0, 0, 0, 0) 102%);
 }
 .stories {
@@ -357,18 +377,25 @@ label {
 
 
 .down {
-    height:430px;
-    width: 280px;
+    height:100%;
+    width: 283px;
     object-fit:cover;
     border-radius: 14px;
     margin-top: 100px;
 }
 
 .up{
-    height:430px;
-    width: 280px;
+    height:100%;
+    width: 283px;
     object-fit:cover;
     border-radius: 14px;
+}
+.mt-1 {
+    margin-top: 20px;
+}
+
+.mt-2 {
+    margin-top: 45px;
 }
 
 .success-heading {
@@ -396,7 +423,7 @@ label {
 }
 
 .up-alumni {
-    height:300px;
+    height:380px;
     width: 280px;
     object-fit:cover;
     border-radius: 14px;
@@ -406,7 +433,8 @@ label {
     overflow: hidden;
     color: white;
     font-size: 1.38rem;
-    margin-top: 10px;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
 }
 .content p {
     font-family: font-medium;
@@ -425,10 +453,11 @@ label {
     align-items: center;
     margin-bottom: 90px;
     z-index: 99;
+    margin-left: 20px;
 }
 
 .show-more button {
-    width: 250px;
+    width: 280px;
     color: #E50914;
     background-color: black;
     border:1px solid #E50914 ;
@@ -436,6 +465,9 @@ label {
     margin: auto;
     font-family: font-default;
     font-size: 20px;
+    position: relative;
+    margin-top: -70px;
+    
 }
 
 .show-more button:hover {
@@ -446,7 +478,8 @@ label {
 .planning {
     font-size: 2rem;
     background-color: white;
-    height: 350px;
+    width: 100%;
+
 
     
 }
@@ -456,6 +489,8 @@ label {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 100px;
+    height: 300px;
 
 }
 
@@ -466,18 +501,21 @@ label {
     
 }
 .youtube-img {
-    padding: 13px;
+    padding: 15px;
     background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     
 }
 
 
 .surprice {
-    height: 400px;
+    height: 370px;
     background-color: white;
     font-family: font-black;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     text-align: center;  
 }
 .surprice-para {
@@ -488,11 +526,13 @@ label {
 }
 .surprice-1 {
     display: flex;
-    width: 600px; 
+    width: 500px; 
     text-align: left;  
+    padding-inline: 20px;
 }
 .surprice-1 p {
     font-family: font-default;
+    font-size: 27px;
 }
 .image-tick {
     margin-right: 15px;
@@ -512,15 +552,17 @@ b {
     width: 500px;
     color: white;
     font-family: font-black;
+    
 
 }
 
 .looking {
     height: auto;
     
+    
 }
 .looking-for {
-    margin-top: 90px;
+    margin-top: 100px;
 
 }
 .looking h1 {
@@ -645,9 +687,10 @@ b {
 .contact {
     background-color: white;
     width: 700px;
-    height: 720px;
+    height: 810px;
     margin: auto;
     line-height: 1.5;
+    margin-bottom: 70px
 
 }
 
@@ -735,6 +778,7 @@ b {
     margin-top: 80px;
 }
 
+
 .our-events h1 {
     text-align: center;
     color: white;
@@ -765,11 +809,15 @@ b {
 .photo-content {
     margin-left: 50px;
     margin-top: 90px;
+    width: 704px;
 }
 .contact-head  {
     margin-top: 90px;
     font-size: 1.75rem;
     font-family: font-black;
+}
+footer {
+    width: 100%;
 }
 .footer {
     width: 1140px;

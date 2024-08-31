@@ -1,0 +1,51 @@
+/* Preloader styles */
+#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeOut 2s forwards;
+    animation-delay: 1s;
+}
+.pre-loading-text {
+    color:white; opacity:0.50; letter-spacing:5px;
+
+}
+.preloarder-line {
+    height: 1px;
+}
+.step {
+    display: flex;
+    opacity:0.50;
+    justify-content: center;
+    align-items: center;
+    
+}
+.step img {
+    width: 50px;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+#content {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+    transition-delay: 1s;
+}
+
+#preloader + #content {
+    opacity: 1;
+    visibility: visible;
+}
