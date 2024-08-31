@@ -3,7 +3,7 @@
 This project is a clone of the Brototype website, built purely using HTML and CSS. The clone replicates the design and layout of the original site, focusing on the structure and styling without using any JavaScript or external libraries.
 
 ### Demo
-You can view the live demo of this project <a href="">demo</a>.
+You can view the live demo of this project <a href="https://brototype-website-clone.vercel.app/">demo</a>.
 
 ### Technologies Used
 HTML5: For creating the structure of the website.
