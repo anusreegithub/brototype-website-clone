@@ -7,7 +7,7 @@ You can view the live demo of this project <a href="https://brototype-website-cl
 
 ### Technologies Used
 HTML5: For creating the structure of the website.
-CSS3: For styling the website, including responsive layouts and animations.
+CSS3: For styling the website.
 
 
 ### Installation
