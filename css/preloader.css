@@ -9,17 +9,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: fadeOut 2s forwards;
-  animation-delay: 1s;
+  animation: fade 1s 0.5s forwards 1;
 }
 .pre-loading-text {
   color: white;
   opacity: 0.5;
   letter-spacing: 5px;
 }
-.preloarder-line {
-  height: 1px;
-}
+
 .step {
   display: flex;
   opacity: 0.5;
@@ -30,21 +27,11 @@
   width: 50px;
 }
 
-@keyframes fadeOut {
+@keyframes fade {
+  from {
+    visibility: visible ;
+  }
   to {
-    opacity: 0;
     visibility: hidden;
   }
-}
-
-#content {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s, visibility 0.5s;
-  transition-delay: 1s;
-}
-
-#preloader + #content {
-  opacity: 1;
-  visibility: visible;
 }
